@@ -1,0 +1,10 @@
+
+<div class="w-100" [ngClass]="{changeBackground: searchValue != ''} ">
+    <div class="input-group w-75 mx-auto mb-1" >
+        <span class="input-group-text" id="inputGroup-sizing-default">Search:</span>
+        <input type="text" class="form-control" [(ngModel)]="searchValue" (input)="onChangeSearch()" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <p class="text-center py-2 fw-bold" *ngIf="searchValue != '' ">You search for "{{searchValue}}"</p> 
+    
+</div>
+<!-- SQIstarlink123#@ -->

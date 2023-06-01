@@ -1,0 +1,31 @@
+<app-search (searchProdChanged)="onSearchValue($event)" ></app-search>
+<app-filter
+[all]="getAllProducts()"
+[available]="getAvailable()"
+[unavail]="getNotAvailable()"
+(changeSelectedFilter)="onProductSelected($event)"></app-filter>
+<ng-container *ngFor="let p of products; let i = index">
+  <!-- <p>{{ i }}</p> -->
+  <!-- <div *ngIf="productSelected == 'All' || productSelected == p.availability"> -->
+  <div *ngIf="searchValue === '' || p.p_name ===  searchValue">
+    <div class="card my-4"  style="width: 18rem;" [ngStyle]="{backgroundColor: p.availability === 'available' ? '#D5F5E3' : 'red'}">
+        <img [src]="p.p_image" class="object-fit-fill card-img-top" [alt]="p.p_image" width="100">
+        <div class="card-body">
+          <h5 class="card-title">{{ p.p_name }}</h5>
+          <p class="card-text">Price : {{ p.p_price }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" [ngStyle]="{color: p.availability === 'available' ? 'green' : 'red'}" >{{ p.availability }}</li>
+          <li class="list-group-item">Color: {{ p.color }}</li>
+        </ul>
+        <div class="card-body">
+          <button class="btn btn-warning mx-2">Show Details</button>
+          <button class="btn btn-success mx-2" *ngIf="p.availability == 'available'; else notifyme ">Buy now</button>
+          <ng-template #notifyme>
+          <button class="btn btn-danger mx-2">Notify me</button>
+          </ng-template>
+        </div>
+      </div>
+</div>
+
+</ng-container>
