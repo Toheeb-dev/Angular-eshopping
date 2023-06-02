@@ -7,7 +7,7 @@
 <ng-container *ngFor="let p of products; let i = index">
   <!-- <p>{{ i }}</p> -->
   <!-- <div *ngIf="productSelected == 'All' || productSelected == p.availability"> -->
-  <div *ngIf="searchValue === '' || p.p_name ===  searchValue">
+  <div *ngIf="searchValue === '' || p.p_name.toLowerCase().includes(searchValue)">
     <div class="card my-4"  style="width: 18rem;" [ngStyle]="{backgroundColor: p.availability === 'available' ? '#D5F5E3' : 'red'}">
         <img [src]="p.p_image" class="object-fit-fill card-img-top" [alt]="p.p_image" width="100">
         <div class="card-body">
