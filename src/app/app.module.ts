@@ -11,6 +11,8 @@ import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { ProductsComponent } from './products/products.component';
 import { FilterComponent } from './filter/filter.component';
+import { EnrollService} from './services/enroll.service';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,7 @@ import { FilterComponent } from './filter/filter.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [EnrollService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

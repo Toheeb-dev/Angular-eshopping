@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EnrollService} from '../services/enroll.service';
 
 @Component({
   selector: '[app-header]',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-constructor(){
+constructor(private enrollService : EnrollService){
 
 }
+title: string = 'header';
 
   ngOnInit(): void {
     
@@ -21,4 +23,8 @@ getSlogan(){
 return "This a new button for shopping new goods"
 }
 
+enroll(){
+  // const enrollService = new EnrollService
+  this.enrollService.OnErrollCliicked(this.title)
+}
 }
