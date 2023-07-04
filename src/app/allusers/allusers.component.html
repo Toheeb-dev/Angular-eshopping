@@ -1,0 +1,7 @@
+<div class="container mt-2 bg-secondary" *ngFor="let user of allUsers">
+    <div class="mx-auto col-6 text-center p-2 justify-content-between d-flex">
+        <p>{{ user.name }}</p>
+        <p>{{ user.job }}</p>
+        <button class="btn btn-warning rounded-0" (click)="showDetails(user)">View Details</button>
+    </div>
+</div>

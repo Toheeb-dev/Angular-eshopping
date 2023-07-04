@@ -12,6 +12,10 @@ import { FormsModule } from '@angular/forms';
 import { ProductsComponent } from './products/products.component';
 import { FilterComponent } from './filter/filter.component';
 import { EnrollService} from './services/enroll.service';
+import { AdduserComponent } from './adduser/adduser.component';
+import { UsersdetailsComponent } from './usersdetails/usersdetails.component';
+import { AllusersComponent } from './allusers/allusers.component';
+import { ObservableComponent } from './AngularObservable/observable/observable.component';
 
 
 @NgModule({
@@ -23,7 +27,11 @@ import { EnrollService} from './services/enroll.service';
     NotificationComponent,
     SearchComponent,
     ProductsComponent,
-    FilterComponent
+    FilterComponent,
+    AdduserComponent,
+    UsersdetailsComponent,
+    AllusersComponent,
+    ObservableComponent
   ],
   imports: [
     BrowserModule,

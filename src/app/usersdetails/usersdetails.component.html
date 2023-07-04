@@ -1,0 +1,15 @@
+<div class="container mt-2 bg-secondary " *ngIf="users != undefined">
+    <div class="mx-auto col-10 p-2 justify-content-evenly d-flex">
+        <div class="border border-3 w-50 p-2 mx-3">
+            <img [src]="users.avatar" width="120" style="object-fit:fill;" height="120" [alt]="users.avatar">
+        </div>
+        <div class="w-50 border border-3 p-2 mx-3">  
+            <p><b>Name:</b> {{users.name}}</p>
+            <p><b>Occupation:</b> {{users.job}} </p>
+            <p><b>Country:</b> {{users.country}} </p>
+            <p><b>Gender:</b> {{users.gender}} </p>
+            <p> <b>Age:</b> {{users.age}} </p>
+        </div>
+    </div>
+</div>
+<app-observable></app-observable>
