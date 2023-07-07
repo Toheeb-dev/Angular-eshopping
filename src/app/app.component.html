@@ -1,18 +1,20 @@
 <app-container></app-container>
-<router-outlet></router-outlet>
 <div class="container border border-2 p-3 bg-secondary">
     <app-adduser></app-adduser>
     <div class="mx-auto col-8 d-flex" *ngFor="let user of users">
         <p class="w-75">{{ user.name }}</p>
         <p class="btn btn-info rounded-0 w-25">{{ user.status }}</p>
     </div>
-
+    
 </div>
 <div class="container">
-        <p class="fw-bold">All users</p>
-        <app-allusers></app-allusers>
-
+    <p class="fw-bold">All users</p>
+    <app-allusers></app-allusers>
+    
 </div>
 <div>
     <app-usersdetails></app-usersdetails>
 </div>
+<app-comp1></app-comp1>
+<app-comp2></app-comp2>
+<router-outlet></router-outlet>

@@ -16,6 +16,9 @@ import { AdduserComponent } from './adduser/adduser.component';
 import { UsersdetailsComponent } from './usersdetails/usersdetails.component';
 import { AllusersComponent } from './allusers/allusers.component';
 import { ObservableComponent } from './AngularObservable/observable/observable.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+
 
 
 @NgModule({
@@ -31,7 +34,9 @@ import { ObservableComponent } from './AngularObservable/observable/observable.c
     AdduserComponent,
     UsersdetailsComponent,
     AllusersComponent,
-    ObservableComponent
+    ObservableComponent,
+    Comp1Component,
+    Comp2Component
   ],
   imports: [
     BrowserModule,

@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { EnrollService} from './services/enroll.service';
 import { UsersService} from './services/users.service';
 import { LoggerService } from './services/logger.service';
+import { DataService } from './services/data.service';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [EnrollService, UsersService, LoggerService]
+  providers: [EnrollService, UsersService, LoggerService, DataService]
 })
 export class AppComponent implements OnInit {
   title = 'eshopping';

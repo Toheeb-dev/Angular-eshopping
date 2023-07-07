@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, from, of } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { filter, map } from 'rxjs/operators';
 
 
 
@@ -85,8 +85,9 @@ array2 = ['A', 'B', 'C', 'D', 'E']
 // USING "from" METHOD TO CREATE OBSERVABLE
 // it emits data intirablely i.e it loops over all the data to be emitted and can has only one argument
 // and can accept 'promise operator'
-myObservable = from(this.array1)
-
+myObservable = from(this.array1).pipe(map((val)=> 5* val), filter((val)=> val % 2 == 0))
+// trasnformedObs = this.myObservable.pipe(map((val)=> 5*val ), filter((val)=> val % 2 == 0));
+// filteredObs = this.trasnformedObs.pipe(filter((val)=> val % 2 == 1))
 ngOnInit(): void {
   this.myObservable.subscribe((val)=>{
     console.log(val);
@@ -98,8 +99,6 @@ ngOnInit(): void {
     alert('observable has completed emitting all values')
   })
 }
-this.myObservable.pipe(map(()=>{
 
-}));
 
 }
